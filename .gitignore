@@ -1,0 +1,20 @@
+# Personal data (user-specific, stays local)
+system/memory/daily/
+system/memory/MEMORY.md
+system/memory/USER.md
+system/memory/context.md
+system/memory/sessions.md
+system/storage/
+
+# Generated
+system/scripts/__pycache__/
+*.sqlite
+*.pyc
+tmp.md
+
+# macOS
+.DS_Store
+
+# Project management state
+.beads/
+.claude/

@@ -1,0 +1,20 @@
+{
+  "name": "hal-os",
+  "description": "Personal AI operating system for Claude Code",
+  "owner": {
+    "name": "Fraser Brown",
+    "email": "fraser@thebrownproject.com"
+  },
+  "plugins": [
+    {
+      "name": "hal-os",
+      "description": "Personal AI operating system for Claude Code. Persistent memory, hybrid search, calendar sync, second brain, networking, and a customizable work PA for your daily life.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "Fraser Brown",
+        "email": "fraser@thebrownproject.com"
+      }
+    }
+  ]
+}
