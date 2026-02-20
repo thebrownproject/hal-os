@@ -32,7 +32,7 @@ HAL-OS COMMANDS
 /calendar      View upcoming calendar events
 /second-brain  Launch note capture/retrieval app
 /networking    Launch event/contact tracking app
-/vibe          Launch work PA
+/work          Launch work PA
 /chat          Open conversation and brainstorming
 
 Type any command to run it.
@@ -116,13 +116,13 @@ Not available: AppleScript, Calendar
 
 Skip calendar sync (no AppleScript access).
 
-Focus: Work tasks and PA assistance (context in system/storage/vibe/CLAUDE.md)
+Focus: Work tasks and PA assistance (context in system/storage/work/CLAUDE.md)
 
 Still an assistant: Can mention relevant personal things (events tonight, reminders, etc.) from memory if useful.
 
 **Email check:** Fetch recent emails using `mcp__outlook-windows-com__get-emails` (last 20 from inbox). Summarize work-related items in greeting.
 
-After greeting, automatically launch `/vibe` to enter work mode.
+After greeting, automatically launch `/work` to enter work mode.
 
 ## Greeting
 

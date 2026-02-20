@@ -32,7 +32,7 @@ HAL-OS/
 │       ├── calendar/
 │       ├── second-brain/
 │       ├── networking/
-│       └── vibe/
+│       └── work/
 ```
 
 | Component | Maps to |
@@ -53,7 +53,7 @@ HAL-OS/
 - `/calendar` - Launch calendar app with Apple Calendar sync (DOS-style)
 - `/second-brain` - Launch note capture/retrieval app (DOS-style)
 - `/networking` - Launch event/contact tracking app (DOS-style)
-- `/vibe` - Launch work task management and PA (DOS-style)
+- `/work` - Launch work task management and PA (DOS-style)
 - `/chat` - Open conversation and brainstorming session
 
 ## Drivers (MCPs)
@@ -89,7 +89,7 @@ A Stop hook fires after every response. It checks if memory was updated. If not,
 
 **When the hook blocks you, do this:**
 1. Append a concise summary to `system/memory/daily/YYYY-MM-DD.md`
-2. Update `system/storage/vibe/tasks.md` if work tasks changed
+2. Update `system/storage/work/tasks.md` if work tasks changed
 3. Update `system/memory/context.md` if active threads changed
 
 **Format for daily log entries:**
@@ -120,7 +120,7 @@ python system/scripts/memory.py search "query"
 ```bash
 memory.py search "query"              # Hybrid search (70% vector + 30% keyword + exact boost)
 memory.py search "query" -n 5         # Limit results
-memory.py search "query" -p vibe      # Scope to folder (vibe, second-brain, networking)
+memory.py search "query" -p work      # Scope to folder (work, second-brain, networking)
 memory.py search "query" -f text      # Human-readable output (default: json)
 memory.py index                       # Lazy re-index (skips unchanged, cleans deleted)
 memory.py index --full                # Force full re-index
@@ -155,6 +155,6 @@ memory.py verify                      # Check database status
 - Goal: set in USER.md (e.g., 1 event per week)
 - Events can link to Calendar via `[networking]` tag
 
-**Vibe** (`system/storage/vibe/`)
+**Work** (`system/storage/work/`)
 - Work task management and PA assistance
 - Has its own CLAUDE.md — customize it with your work context

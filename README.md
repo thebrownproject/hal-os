@@ -22,7 +22,7 @@ HAL-OS COMMANDS
 /calendar      View upcoming calendar events
 /second-brain  Launch note capture/retrieval app
 /networking    Launch event/contact tracking app
-/vibe          Launch work PA
+/work          Launch work PA
 /chat          Open conversation and brainstorming
 
 Type any command to run it.
@@ -50,8 +50,8 @@ Collaborative note capture. HAL asks questions and drafts the note — you confi
 **Networking Tracker**
 Event attendance log, contact database, goal tracking (e.g. 1 event/week). Tracks who you met, where, and what they do.
 
-**Work PA (Vibe)**
-Configurable work assistant. Set your work context in `system/storage/vibe/CLAUDE.md`. Task management, file lookup, technical queries.
+**Work PA**
+Configurable work assistant. Set your work context in `system/storage/work/CLAUDE.md`. Task management, file lookup, technical queries.
 
 **Auto-Memory Hook**
 A Stop hook fires after every response. If memory wasn't updated, it forces a persist pass before you can continue. Nothing slips through.
@@ -84,7 +84,7 @@ This creates the `system/` directory structure, installs template files, and set
 
 - `system/memory/SOUL.md` — Define your AI's persona
 - `system/memory/USER.md` — Add your profile (name, focus, projects, preferences)
-- `system/storage/vibe/CLAUDE.md` — Add your work context
+- `system/storage/work/CLAUDE.md` — Add your work context
 
 **5. Boot:**
 
@@ -111,7 +111,7 @@ HAL-OS/
 │       ├── calendar/
 │       ├── second-brain/
 │       ├── networking/
-│       └── vibe/
+│       └── work/
 └── skills/
     ├── boot/
     ├── shutdown/
@@ -119,7 +119,7 @@ HAL-OS/
     ├── calendar/
     ├── second-brain/
     ├── networking/
-    ├── vibe/
+    ├── work/
     ├── chat/
     └── install/           # Setup skill + bundled memory.py
 ```
@@ -148,7 +148,7 @@ The memory system is the core of HAL-OS. `memory.py` is a self-contained Python 
 **What gets indexed:**
 - `system/memory/*.md` (SOUL, USER, MEMORY, context)
 - `system/memory/daily/*.md` (all session logs)
-- `system/storage/**/*.md` (calendar, networking, second-brain, vibe)
+- `system/storage/**/*.md` (calendar, networking, second-brain, work)
 
 **Commands:**
 ```bash

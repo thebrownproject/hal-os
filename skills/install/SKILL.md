@@ -37,7 +37,7 @@ mkdir -p system/scripts
 mkdir -p system/storage/calendar
 mkdir -p system/storage/second-brain/notes
 mkdir -p system/storage/networking
-mkdir -p system/storage/vibe/references
+mkdir -p system/storage/work/references
 ```
 
 ### Step 3: Copy Bundled Scripts
@@ -84,7 +84,7 @@ Customize this file to define your AI's personality.
 - Calendar (Apple Calendar sync via AppleScript)
 - Second Brain (note capture and retrieval)
 - Networking (event and contact tracking)
-- Vibe (work task management and PA)
+- Work (work task management and PA)
 - Memory (hybrid SQLite + vector search)
 
 **Drivers (MCPs):**
@@ -99,7 +99,7 @@ Customize this file to define your AI's personality.
 - `/calendar` - Calendar management (DOS-style)
 - `/second-brain` - Note capture/retrieval (DOS-style)
 - `/networking` - Event/contact tracking (DOS-style)
-- `/vibe` - Work task management (DOS-style)
+- `/work` - Work task management (DOS-style)
 - `/chat` - Open conversation
 
 ## Operating Principles
@@ -229,7 +229,7 @@ HAL's calendar subsystem syncs with Apple Calendar and adds context that Apple C
 
 Use tags in Notes column to link events across subsystems:
 - `[networking]` - Networking events (links to networking subsystem)
-- `[work]` - Work events (links to vibe subsystem)
+- `[work]` - Work events (links to work subsystem)
 - `[personal]` - Personal events
 
 ## Sections
@@ -339,9 +339,9 @@ YYYY-MM-DD_type_brief-description.md
 4. Update "Total Notes" count
 ```
 
-**`system/storage/vibe/CLAUDE.md`:**
+**`system/storage/work/CLAUDE.md`:**
 ```markdown
-# Vibe - Work Context
+# Work Context
 
 Your work PA. Customize this file with your work context.
 
@@ -419,7 +419,7 @@ Total Notes: 0
 |------|------|-------|----------|-------|--------|
 ```
 
-**`system/storage/vibe/tasks.md`:**
+**`system/storage/work/tasks.md`:**
 ```markdown
 # Tasks
 
@@ -434,7 +434,7 @@ Total Notes: 0
 |------|---------|-----------|
 ```
 
-**`system/storage/vibe/jobs.md`:**
+**`system/storage/work/jobs.md`:**
 ```markdown
 # Jobs / Projects
 
@@ -477,7 +477,7 @@ HAL-OS INSTALLATION COMPLETE
 NEXT STEPS
   1. Edit system/memory/SOUL.md  -- define your AI's persona
   2. Edit system/memory/USER.md  -- add your profile
-  3. Edit system/storage/vibe/CLAUDE.md  -- add your work context
+  3. Edit system/storage/work/CLAUDE.md  -- add your work context
   4. Run /boot to start your first session
 
 HAL-OS standing by.
@@ -517,6 +517,6 @@ The `/install` skill:
 4. Installs Python dependencies
 5. Writes template files for personalization
 6. Initializes memory database
-7. Guides user to customize SOUL.md, USER.md, and vibe/CLAUDE.md
+7. Guides user to customize SOUL.md, USER.md, and work/CLAUDE.md
 
 Run once per HAL-OS instance. After installation, use `/boot` to start your first session.
