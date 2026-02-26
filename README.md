@@ -6,12 +6,12 @@ Personal AI operating system for Claude Code.
 
 ## What is HAL-OS?
 
-HAL-OS is a personal AI OS built on top of Claude Code. Inspired by HAL 9000 — calm, helpful, slightly unsettling. It gives Claude persistent memory across sessions, DOS-style subsystem apps, and a hybrid search engine that indexes your life.
+HAL-OS is a personal AI OS built on top of Claude Code. Inspired by HAL 9000. Calm, helpful, slightly unsettling. It gives Claude persistent memory across sessions, DOS-style subsystem apps, and a hybrid search engine that indexes your life.
 
 You open your HAL-OS directory in Claude Code, run `/boot`, and your AI knows who you are, what you're working on, and what happened last session.
 
 ```
-HAL-OS online — Friday, 20 February 2026
+HAL-OS online. Friday, 20 February 2026
 Mode: HOME
 
 HAL-OS COMMANDS
@@ -34,7 +34,7 @@ Type any command to run it.
 Two-layer memory: daily session logs + curated long-term knowledge in `MEMORY.md`. Survives context resets. Survives new sessions. Your AI remembers.
 
 **Hybrid Search**
-`memory.py` indexes your notes with SQLite + sqlite-vec (vector similarity) + FTS5 (BM25 keyword). 70% vector, 30% keyword, +0.15 boost for exact matches. Search before answering — no hallucinating past context.
+`memory.py` indexes your notes with SQLite + sqlite-vec (vector similarity) + FTS5 (BM25 keyword). 70% vector, 30% keyword, +0.15 boost for exact matches. Search before answering. No hallucinating past context.
 
 ```bash
 python system/scripts/memory.py search "what did I decide about X?"
@@ -45,7 +45,7 @@ python system/scripts/memory.py search "Jacob meeting" -p networking
 Apple Calendar ↔ HAL-OS sync via AppleScript. Add events, view upcoming, annotate with HAL context that Apple Calendar can't store.
 
 **Second Brain**
-Collaborative note capture. HAL asks questions and drafts the note — you confirm before anything is written. Notes are typed, dated, tagged, and indexed for retrieval.
+Collaborative note capture. HAL asks questions and drafts the note, then you confirm before anything is written. Notes are typed, dated, tagged, and indexed for retrieval.
 
 **Networking Tracker**
 Event attendance log, contact database, goal tracking (e.g. 1 event/week). Tracks who you met, where, and what they do.
@@ -82,9 +82,9 @@ This creates the `system/` directory structure, installs template files, and set
 
 **4. Customize:**
 
-- `system/memory/SOUL.md` — Define your AI's persona
-- `system/memory/USER.md` — Add your profile (name, focus, projects, preferences)
-- `system/storage/work/CLAUDE.md` — Add your work context
+- `system/memory/SOUL.md`: Define your AI's persona
+- `system/memory/USER.md`: Add your profile (name, focus, projects, preferences)
+- `system/storage/work/CLAUDE.md`: Add your work context
 
 **5. Boot:**
 
@@ -161,13 +161,13 @@ python system/scripts/memory.py get <file> <line> <count>      # retrieve contex
 
 ## Privacy
 
-Your personal data lives in your instance — not in this repo. The `.gitignore` excludes:
-- `system/memory/daily/` — session logs
-- `system/memory/MEMORY.md` — curated knowledge
-- `system/memory/USER.md` — your profile
-- `system/memory/context.md` — working state
-- `system/storage/` — all subsystem data
-- `*.sqlite` — search database
+Your personal data lives in your instance, not in this repo. The `.gitignore` excludes:
+- `system/memory/daily/`: session logs
+- `system/memory/MEMORY.md`: curated knowledge
+- `system/memory/USER.md`: your profile
+- `system/memory/context.md`: working state
+- `system/storage/`: all subsystem data
+- `*.sqlite`: search database
 
 Only the framework (skills, scripts, kernel) is tracked. Your data stays local.
 
@@ -176,8 +176,8 @@ Only the framework (skills, scripts, kernel) is tracked. Your data stays local.
 - Claude Code
 - Python 3.8+
 - `sentence-transformers` + `sqlite-vec` (installed by `/install`)
-- macOS with AppleScript (for calendar sync — optional)
-- Perplexity MCP (for web search — optional)
+- macOS with AppleScript (for calendar sync, optional)
+- Perplexity MCP (for web search, optional)
 
 ## License
 
